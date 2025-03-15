@@ -27,18 +27,14 @@ int main() {
     for ( i = N - 2; i >= 0; i--) {
         for ( j = 0; j <= i; j++) {
         	
-            //maj  chaque élément en ajoutant le maximum des deux éléments adjacents de la ligne suivante
+            //maj  chaq elmt en ajoutant le max des deux elmts adjacents de la ligne suivant
 			if (triangle[i + 1][j] > triangle[i + 1][j + 1]) {
 			  	triangle[i][j] += triangle[i + 1][j];
 				} else {
     				triangle[i][j] += triangle[i + 1][j + 1];
-			}
-	    }
+			}}
     }
-
-    
     printf("Le total  est: %d\n", triangle[0][0]);
-
     return 0;
 }
 
